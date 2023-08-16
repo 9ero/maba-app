@@ -1,0 +1,45 @@
+@use 'sass:map';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
+// fonts 
+
+$roboto: 'Roboto', sans-serif;
+
+//colors
+
+$primary: #3E912B;
+$light: rgb(255, 255, 255);
+
+
+$minPoints:(
+    'sm-min-screen': 576px,
+// Small tablets (portrait view)
+    'md-min-screen': 768px,
+// Tablets and small desktops
+    'lg-min-screen': 992px,
+// Large tablets and desktops
+    'xl-min-screen': 1200px
+);
+
+@mixin breakPoints($point){
+    @if $point == sm{
+        @media (min-width: map.get($minPoints, 'sm-min-screen')) {
+            @content;
+        }
+    }
+    @if $point == md{
+        @media (min-width: map.get($minPoints, 'md-min-screen')) {
+            @content;
+        }
+    }
+    @if $point == lg{
+        @media (min-width: map.get($minPoints, 'lg-min-screen')) {
+            @content;
+        }
+    }
+    @if $point == xl{
+        @media (min-width: map.get($minPoints, 'xl-min-screen')) {
+            @content;
+        }
+    }
+}
+
