@@ -1,11 +1,12 @@
-import { useActionData } from "react-router-dom"
 import { Header } from "./Header"
 import { useEffect } from "react"
+import { Footer } from "./Footer"
+import style from './Layout.module.css'
 
 export const Layout = ({ title, children }) => {
-	
+	document.title = title
     useEffect(()=>{
-        document.title = title;
+        
     }, [])
 
 	return (
@@ -13,7 +14,8 @@ export const Layout = ({ title, children }) => {
 			
 			
                 <Header/>
-				<div>{children}</div>
+				<div className={style.container}>{children}</div>
+				<Footer/>
 			
 		</>
 	)

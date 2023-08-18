@@ -1,8 +1,9 @@
 @import './../styles/Variables.scss';
 
 .headerContainer{
+    position: fixed;
     background-color: $light;
-    width: 100;
+    width: 100vw;
     padding: 20px calc(7vw - 10px);
     nav{
         display: flex;
@@ -10,20 +11,21 @@
         justify-content: space-between;
     ul{
         margin: 0;
-        padding: 0;
+        padding: 15px 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        @include breakPoints(md){
+        @include breakPoints(lg){
             flex-direction: row;
+            margin: 0px;
             
         }
         li{
             list-style: none;
             
             margin: 20px 0;
-            @include breakPoints(md){
+            @include breakPoints(lg){
                 margin: 0px 10px;
             }
             
@@ -32,10 +34,14 @@
                 font-family: $roboto;
                 font-weight: 500;
                 color: black;
-                
-                
+                font-size: 1.3rem;
                 text-decoration: none;
-                font-size: 1.1rem;
+                
+                @include breakPoints(lg){
+                    
+                    font-size: 18px;
+                }
+                
                 
             }
         }
@@ -46,7 +52,6 @@
 }
  .logo{
     width: min(400px, 65vw);
-    padding: 2px;
  }
 
  .contactLink{
@@ -62,7 +67,7 @@
     display: none;
     flex-direction: column;
     align-items: center;
-    @include breakPoints(md){
+    @include breakPoints(lg){
         display: flex;
         flex-direction: row;
         
@@ -88,9 +93,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @include breakPoints(md){
+    @include breakPoints(lg){
         flex-direction: row;
-
     }
  }
 
@@ -101,8 +105,7 @@
     &:first-child{
         margin-bottom: 10px;
 
-        
-        @include breakPoints(md){
+        @include breakPoints(lg){
             margin-right: 10px;
             margin-bottom: 0px;
         }
@@ -112,7 +115,7 @@
  .toggler{
     display: block;
     z-index: 1;
-    @include breakPoints(md){
+    @include breakPoints(lg){
         display: none;
     }
         &Icon{

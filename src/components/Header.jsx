@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom"
 import style from './Header.module.scss'
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Logo from './../assets/logoMABAv2.svg'
 import Eng from './../assets/usaFlag.svg'
 import Esp from './../assets/spainFlag.svg'
 import { CgMenuRight, CgClose } from 'react-icons/cg'
 
 
-import { useChangeLanguageContext, useLabelsContext, useLanguageContext } from "./LanguageProvider"
+import { useChangeLanguageContext, useLabelsContext,  } from "./LanguageProvider"
 export const Header = () => {
-    const language = useLanguageContext()
     const text = useLabelsContext()
     const changeLanguage = useChangeLanguageContext()
     const [expanded, setExpanded] = useState(false)
@@ -18,9 +17,7 @@ export const Header = () => {
     }
 
 
-    useEffect(() => {
 
-    })
 
 
     return <div className={style.headerContainer}>
@@ -29,7 +26,7 @@ export const Header = () => {
             <div className={style.logoContainer}>
                 <Link to='/'><img className={style.logo} src={Logo} alt="Logo MABA AgroExport" /></Link>
             </div>
-            <div onClick={expanded?expand:''} className={`${style.links} ${expanded ? style.expand : ''}`}>
+            <div onClick={expanded?expand:null} className={`${style.links} ${expanded ? style.expand : ''}`}>
                 <div className={style.flagContainer}>
                     <img className={style.flag} onClick={() => changeLanguage('eng')} src={Eng} alt="Usa Flag" />
                     <img className={style.flag} onClick={() => changeLanguage('spa')} src={Esp} alt="Spain Flag" />

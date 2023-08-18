@@ -1,0 +1,52 @@
+@import './../styles/Variables.scss';
+
+.footer{
+    background-image: linear-gradient(rgb($primary,0.1), $primary);
+    width: 100;
+    padding: 20px calc(7vw - 10px);
+    text-align: center;
+    &Elements{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        align-items: start;
+        font-family: $roboto;
+        font-weight: 400;
+        font-size: 16px;
+        flex-wrap: wrap;
+        
+        @include breakPoints(md){
+            flex-direction: row;
+        }
+        @include breakPoints(sm){
+            font-size: 18px
+        }
+        &Element{
+            background-color: $primary;
+            color: $light;
+            padding: 1px 25px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 5px;
+            cursor:pointer;
+            
+
+            &Icon{
+                width: 40px;
+                height: 40px;
+                margin-right: 15px;
+                
+            }
+        }
+    }
+    &Disclaimer{
+        text-align: center;
+        color: rgb(49, 49, 49);
+        font-family: $roboto;
+        font-weight: 400;
+        font-size: 18px;
+    }
+}
