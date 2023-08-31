@@ -1,0 +1,10 @@
+@import './../../styles/Variables.scss';
+
+.container{
+    display: flex;
+    gap: 2vh;
+    flex-direction: column;
+    @include breakPoints(sm){
+        flex-direction: row;
+    }
+}

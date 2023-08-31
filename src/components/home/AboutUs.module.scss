@@ -1,9 +1,10 @@
 @import './../../styles/variables.scss';
 
 .aboutUs{
-    font-size: $roboto;
-    margin-top: 20vh;
     
+    font-size: $roboto;
+    margin-top: 40vh;
+    opacity: 0;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -30,4 +31,13 @@
             width: 46%;
         }
     }
+}
+
+.active{
+    z-index: 0;
+    
+    margin-top: 15vh;
+    opacity: 1;
+    transition: opacity 2s, margin-top 2s;
+   
 }
