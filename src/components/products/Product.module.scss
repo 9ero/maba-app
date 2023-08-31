@@ -1,0 +1,19 @@
+@import './../../styles/Variables.scss';
+
+.product{
+    width: 85vw;
+    @include breakPoints(sm){
+        width: 32vw;
+    }
+    h2{
+        text-align: center;
+        font-family: $roboto;
+        font-size: 2rem;
+    }
+    img{
+        width: 85vw;
+        @include breakPoints(sm){
+            width: 28vw;
+        }
+    }
+}

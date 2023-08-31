@@ -15,6 +15,11 @@ export const Header = () => {
     const expand = () => {
         setExpanded(!expanded)
     }
+    
+    const clickHaddler=()=>{
+        console.log('hola')
+        
+    }
 
 
 
@@ -39,7 +44,7 @@ export const Header = () => {
                         <Link to='/products' >{text.nav.products}</Link>
                     </li>
                     <li>
-                        <Link to='/' >{text.nav.about}</Link>
+                        <Link onClick={clickHaddler} to='/' >{text.nav.about}</Link>
                     </li>
                     <li className={style.contactLink}>
                         <Link to='/contact' >{text.nav.contact}</Link>
