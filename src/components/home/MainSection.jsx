@@ -12,7 +12,6 @@ export const MainSection = () => {
     const imageList = [cassava, cassava2, cassava4, cassava5, cassava6]
 
     const changeImage = () => {
-        console.log('cuenta actual: '+imageCounter +' Next: '+(imageCounter+1))
         imageCounter < imageList.length - 1 ? setImageCounter(imageCounter + 1) : setImageCounter(0)
     }
     
