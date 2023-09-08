@@ -39,7 +39,7 @@ section{
 .active{    
     transform: translate(0, 4vh);
     opacity: 1;
-    transition: all 2s ease-in-out;
+    transition: opacity 1.8s ease-in-out, transform 0.8s ease-out;
    
 }
 .helperTitle{
@@ -57,13 +57,13 @@ section{
         
         translate: -12px;
         color: $primary;
-        animation: bouncing 1.5s infinite ease-in-out;
+        animation: bouncing 2s infinite ease-in-out;
     }
 }
 
 @keyframes bouncing {
-    0%{bottom: -2vh;}
-    50%{bottom: -5vh;}
-    100%{bottom: -2vh;}
+    0%{bottom: 0vh;}
+    30%{bottom: -1vh;}
+    100%{bottom: 0vh;}
     
   }

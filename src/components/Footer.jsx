@@ -29,7 +29,7 @@ export const Footer = () => {
             <div onClick={() => copyText(text.footer.phone)} className={style.footerElementsElement}>
                 <BsTelephone className={style.footerElementsElementIcon} /> {!copied ? <p>{text.footer.phone}</p> : <p>Text copied</p>}
             </div>
-            <div onClick={()=>window.open("https://wa.me/50685062925?text=I'm%20interested%20in%20your%20products",'_blank', 'rel=noopener noreferrer')} className={style.footerElementsElement}><BsWhatsapp className={style.footerElementsElementIcon} /><p>{text.footer.whatsapp}</p></div>
+            <div onClick={()=>window.open("https://wa.me/50685062925?text=I'm%20interested%20in%20your+products",'_blank', 'rel=noopener noreferrer')} className={style.footerElementsElement}><BsWhatsapp className={style.footerElementsElementIcon} /><p>{text.footer.whatsapp}</p></div>
             <div className={style.footerElementsElement}><BsFacebook className={style.footerElementsElementIcon} /><p>{text.footer.facebook}</p></div>
         </div>
         <div className={style.footerDisclaimer}>
