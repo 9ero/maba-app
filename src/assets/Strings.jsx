@@ -2,6 +2,7 @@ export const Strings = (lang) => {
 
     const companyName = 'MABA AgroExport'
     const text = {
+        lang: lang,
         nav: {
             home: lang == 'spa' ? 'Inicio' : lang == 'eng' ? 'Home' : 'Home',
             about: lang == 'spa' ? 'Nosotros' : lang == 'eng' ? 'About us' : 'About us',

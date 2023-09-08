@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 import style from './Footer.module.scss'
 import { useLabelsContext } from './LanguageProvider'
-import { CgMail, CgPhone } from 'react-icons/cg'
-import { FaWhatsapp, FaFacebook } from 'react-icons/fa'
+import {BsEnvelope, BsFacebook, BsTelephone, BsWhatsapp} from 'react-icons/bs'
+
+
 
 export const Footer = () => {
     const text = useLabelsContext()
@@ -14,21 +15,25 @@ export const Footer = () => {
         setTimeout(() => { setCopied(false) }, 750)
     }
 
-    return <div className={style.footer}>
+
+
+ 
+
+    return <footer className={style.footer}>
 
 
         <div className={style.footerElements}>
             <div onClick={() => copyText(text.footer.email)} className={style.footerElementsElement}>
-                <CgMail className={style.footerElementsElementIcon} /> {!copied ? <p>{text.footer.email}</p> : <p>Text copied</p>}
+                <BsEnvelope className={style.footerElementsElementIcon} /> {!copied ? <p>{text.footer.email}</p> : <p>Text copied</p>}
             </div>
             <div onClick={() => copyText(text.footer.phone)} className={style.footerElementsElement}>
-                <CgPhone className={style.footerElementsElementIcon} /> {!copied ? <p>{text.footer.phone}</p> : <p>Text copied</p>}
+                <BsTelephone className={style.footerElementsElementIcon} /> {!copied ? <p>{text.footer.phone}</p> : <p>Text copied</p>}
             </div>
-            <div className={style.footerElementsElement}><FaWhatsapp className={style.footerElementsElementIcon} /><p>{text.footer.whatsapp}</p></div>
-            <div className={style.footerElementsElement}><FaFacebook className={style.footerElementsElementIcon} /><p>{text.footer.facebook}</p></div>
+            <div onClick={()=>window.open("https://wa.me/50685062925?text=I'm%20interested%20in%20your%20products",'_blank', 'rel=noopener noreferrer')} className={style.footerElementsElement}><BsWhatsapp className={style.footerElementsElementIcon} /><p>{text.footer.whatsapp}</p></div>
+            <div className={style.footerElementsElement}><BsFacebook className={style.footerElementsElementIcon} /><p>{text.footer.facebook}</p></div>
         </div>
         <div className={style.footerDisclaimer}>
             <h5>{text.footer.disclaimer}</h5>
         </div>
-    </div>
+    </footer>
 }

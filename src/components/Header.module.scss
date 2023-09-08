@@ -5,6 +5,7 @@
     background-color: $light;
     width: 100vw;
     padding: 20px calc(7vw - 10px);
+    z-index: 1;
 
     nav {
         display: flex;
@@ -28,14 +29,14 @@
             li {
                 list-style: none;
 
-                margin: 20px 0;
+                margin: 30px 0;
 
                 @include breakPoints(lg) {
-                    margin: 0px 10px;
+                    margin: 0px 15px;
                 }
 
                 a {
-                    padding: 15px 12px;
+                    padding: 15px 20px;
                     font-family: $roboto;
                     font-weight: 500;
                     color: black;
@@ -103,49 +104,45 @@
     height: 100vh;
     right: 0;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     backdrop-filter: blur(3px);
-    background-color: rgb($primary, 0.1);
+    background-color: rgb($light, 0.6);
 }
 
 .flagContainer {
-    margin-right: 5vw;
+    width: 17vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 
     @include breakPoints(lg) {
         flex-direction: row;
-        margin-right: 5vw;
     }
 }
 
 .flag {
 
     width: 60px;
+    margin-bottom: 20px;
+    @include breakPoints(lg){
+        margin-bottom: 0px;
+    }
+    
     cursor: pointer;
 
-    &:first-child {
-        margin-bottom: 10px;
-
-        @include breakPoints(lg) {
-            margin-right: 10px;
-            margin-bottom: 0px;
-        }
-    }
 }
 
 .toggler {
     display: block;
-    z-index: 2;
+    z-index: 3;
 
     @include breakPoints(lg) {
         display: none;
     }
 
     &Icon {
-        height: 30px;
-        width: 30px;
+        height: 40px;
+        width: 40px;
     }
 }

@@ -6,13 +6,13 @@ export const Layout = ({ title, children }) => {
 	document.title = title
     
 	return (
-		<>
+		<body className={style.appContainer}>
 			
 			
-                <Header/>
+                <Header />
 				<div className={style.container}>{children}</div>
 				<Footer/>
 			
-		</>
+		</body>
 	)
 }

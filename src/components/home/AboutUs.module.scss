@@ -1,29 +1,31 @@
 @import './../../styles/Variables.scss';
 
-
+section{
+    position: relative;
+}
 .aboutUs{
-    
-    font-size: $roboto;
-    margin-top: 50vh;
+    font-family: $roboto;
+    transform: translate(0,40vh);
     opacity: 0;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    gap: calc(7vw - 3px);
+    gap: calc(4vw - 3px);
     @include breakPoints(md){
         flex-direction: row;
     }
     h2{
         font-weight: 400;
         font-size: 40px;
-        padding: 10px;
+        padding: 10px 25px;
         background-color: rgb($primary,0.1);
         color: rgb($primary,0.9);
         width: max-content;
     }
-    p{
+    p{  
         font-size: 18px;
+        text-align: justify;
     }
 
     &Block{
@@ -34,11 +36,34 @@
     }
 }
 
-.active{
-    z-index: 0;
-    
-    margin-top: 15vh;
+.active{    
+    transform: translate(0, 4vh);
     opacity: 1;
-    transition: opacity 2s, margin-top 2s;
+    transition: all 2s ease-in-out;
    
 }
+.helperTitle{
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid $primary;
+    
+    margin-top: 5vh;
+    
+    
+    transition: opacity 1s;
+    span{
+        
+       position: relative;
+        
+        translate: -12px;
+        color: $primary;
+        animation: bouncing 1.5s infinite ease-in-out;
+    }
+}
+
+@keyframes bouncing {
+    0%{bottom: -2vh;}
+    50%{bottom: -5vh;}
+    100%{bottom: -2vh;}
+    
+  }

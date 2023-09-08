@@ -26,8 +26,8 @@ export const MainSection = () => {
     return <div className={style.container}>
         <div className={style.containerInfo}>
             <h3>Cassava</h3>
-            <h2>Our star product</h2>
-            <p>¿Buscas diversificar tu dieta y explorar sabores auténticos? La yuca es la respuesta. Originaria de tierras lejanas y acogida en cocinas de todo el mundo, esta planta sorprende con su capacidad de adaptarse a una amplia gama de platos y preparaciones.</p>
+            <h2>Frescura de Costa Rica en Tu Mesa</h2>
+            <p> Descubre la auténtica yuca costarricense de MABA Agroexport. Producida en el corazón de San Carlos, nuestra yuca es sinónimo de frescura y calidad. ¡Lleva el sabor de Costa Rica a tu hogar con cada bocado! Explora nuestra gama de tubérculos y disfruta de la diferencia que solo MABA Agroexport puede ofrecer.</p>
             <button className={style.containerInfoQuote}>Quote NOW</button>
             <button className={style.containerInfoContact}>Contact Us</button>
         </div>

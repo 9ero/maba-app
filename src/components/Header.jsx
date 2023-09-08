@@ -16,16 +16,12 @@ export const Header = () => {
         setExpanded(!expanded)
     }
     
-    const clickHaddler=()=>{
-        console.log('hola')
-        
-    }
 
 
 
 
 
-    return <div className={style.headerContainer}>
+    return <header className={style.headerContainer}>
 
         <nav>
             <div className={style.logoContainer}>
@@ -33,8 +29,8 @@ export const Header = () => {
             </div>
             <div onClick={expanded?expand:null} className={`${style.links} ${expanded ? style.expand : ''}`}>
                 <div className={style.flagContainer}>
-                    <img className={style.flag} onClick={() => changeLanguage('eng')} src={Eng} alt="Usa Flag" />
-                    <img className={style.flag} onClick={() => changeLanguage('spa')} src={Esp} alt="Spain Flag" />
+                    <img style={text.lang == 'eng'?{transform: 'scale(1.2)'}:{transform: 'scale(1)'}} className={style.flag} onClick={() => changeLanguage('eng')} src={Eng} alt="Usa Flag" />
+                    <img style={text.lang == 'spa'?{transform: 'scale(1.2)'}:{transform: 'scale(1)'}} className={style.flag} onClick={() => changeLanguage('spa')} src={Esp} alt="Spain Flag" />
                 </div>
                 <ul>
                     <li>
@@ -42,9 +38,6 @@ export const Header = () => {
                     </li>
                     <li>
                         <Link to='/products' >{text.nav.products}</Link>
-                    </li>
-                    <li>
-                        <Link onClick={clickHaddler} to='/' >{text.nav.about}</Link>
                     </li>
                     <li className={style.contactLink}>
                         <Link to='/contact' >{text.nav.contact}</Link>
@@ -59,5 +52,5 @@ export const Header = () => {
         </nav>
 
 
-    </div>
+    </header>
 }
