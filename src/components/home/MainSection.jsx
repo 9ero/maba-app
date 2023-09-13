@@ -5,14 +5,28 @@ import cassava2 from './../../assets/cassava/cassava2.webp'
 import cassava4 from './../../assets/cassava/cassava4.webp'
 import cassava5 from './../../assets/cassava/cassava5.webp'
 import cassava6 from './../../assets/cassava/cassava6.webp'
+import { useLabelsContext } from '../LanguageProvider'
+import { useNavigate } from 'react-router-dom'
 
 export const MainSection = () => {
     const [imageCounter, setImageCounter] = useState(0)
 
-    const imageList = [cassava, cassava2, cassava4, cassava5, cassava6]
+    const imageList = [cassava2, cassava5, cassava4, cassava, cassava6]
+
+    const text = useLabelsContext()
+    const navigate = useNavigate()
 
     const changeImage = () => {
         imageCounter < imageList.length - 1 ? setImageCounter(imageCounter + 1) : setImageCounter(0)
+    }
+    const contacHandler=()=>{
+         navigate('/contact')
+    }
+    const quoteHandler = ()=>{
+        const formattingUrl = (text) => {
+            return text.replaceAll(' ', '+')
+        }
+        window.open(`https://wa.me/50685062925?text=${formattingUrl("Hello, i'm interested in your products")}`)
     }
     
     useEffect(() => {
@@ -23,14 +37,14 @@ export const MainSection = () => {
     }, [imageCounter])
 
 
-    return <div className={style.container}>
+    return <article className={style.container}>
         <div className={style.containerInfo}>
-            <h3>Cassava</h3>
-            <h2>Frescura de Costa Rica en Tu Mesa</h2>
-            <p> Descubre la auténtica yuca costarricense de MABA Agroexport. Producida en el corazón de San Carlos, nuestra yuca es sinónimo de frescura y calidad. ¡Lleva el sabor de Costa Rica a tu hogar con cada bocado! Explora nuestra gama de tubérculos y disfruta de la diferencia que solo MABA Agroexport puede ofrecer.</p>
-            <button className={style.containerInfoQuote}>Quote NOW</button>
-            <button className={style.containerInfoContact}>Contact Us</button>
+            <h3>{text.pages.home.mainSection.title}</h3>
+            <h2>{text.pages.home.mainSection.subTitle}</h2>
+            <p> {text.pages.home.mainSection.description}</p>
+            <button onClick={quoteHandler} className={style.containerInfoQuote}>{text.pages.home.mainSection.quote}</button>
+            <button onClick={contacHandler} className={style.containerInfoContact}>{text.pages.home.mainSection.contact}</button>
         </div>
         <div style={{ backgroundImage: `url(${imageList[imageCounter]})` }} className={style.containerPhoto} />
-    </div>
+    </article>
 }

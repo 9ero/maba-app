@@ -3,7 +3,7 @@
 .container{
     
     padding: 20px calc(7vw - 10px);
-    padding-top: calc(17vh - 25px);
+    padding-top: calc(15vh + 25px);
     margin-bottom: 7vh;
     min-height: calc(90vh - 4.5vw);
     

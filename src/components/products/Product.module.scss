@@ -3,12 +3,19 @@
 .product{
     width: 85vw;
     @include breakPoints(sm){
-        width: 32vw;
+        width: 27vw;
     }
-    h2{
+    p{
         text-align: center;
-        font-family: $roboto;
-        font-size: 2rem;
+        color: $primary;
+        font-family: $noto;
+        font-size: 1.8rem;
+        margin: 0;
+        span{
+            color:black;
+            font-size: 1.1rem;
+        }
+        
     }
     img{
         width: 85vw;

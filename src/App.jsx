@@ -16,7 +16,6 @@ function App() {
         <Route path='/products' element={<Products/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='*' element={<NotFound/>}/>
-
       </Routes>
       </LanguageProvider>
     </>

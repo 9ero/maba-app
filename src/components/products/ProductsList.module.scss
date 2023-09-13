@@ -4,7 +4,9 @@
     display: flex;
     gap: 2vh;
     flex-direction: column;
+    flex-wrap: wrap;
     @include breakPoints(sm){
         flex-direction: row;
     }
+   
 }

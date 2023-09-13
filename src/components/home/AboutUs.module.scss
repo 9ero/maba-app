@@ -17,22 +17,30 @@ section{
     }
     h2{
         font-weight: 400;
-        font-size: 40px;
+        font-size: 25px;
         padding: 10px 25px;
         background-color: rgb($primary,0.1);
         color: rgb($primary,0.9);
         width: max-content;
+        @include breakPoints(sm){
+            font-size: 40px;
+        }
     }
     p{  
-        font-size: 18px;
+        font-family: $noto;
         text-align: justify;
+        font-size: 16px;
+            @include breakPoints(sm){
+                font-size: 18px;
+            }
     }
 
     &Block{
         width: 100%;
         @include breakPoints(md){
-            width: 46%;
+            width: 46%;  
         }
+        
     }
 }
 

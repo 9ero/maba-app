@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { Strings } from "../assets/Strings";
+import { Strings } from "./Strings";
 
 
 const SwitchLanguageContext = createContext()
