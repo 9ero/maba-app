@@ -33,7 +33,7 @@ export const Footer = () => {
             <div onClick={() => copyText(text.footer.phone)} className={style.footerElementsElement}>
                 <BsTelephone className={style.footerElementsElementIcon} /> {!copied ? <p>{text.footer.phone}</p> : <p>Text copied</p>}
             </div>
-            <Link style={{textDecoration: 'none'}} to={`https://wa.me/50685062925?text=${formattingUrl('asd')}`} target='_Blank'>
+            <Link style={{textDecoration: 'none'}} to={`https://wa.me/50685062925?text=${formattingUrl("Hello, i'm interesed in your products")}`} target='_Blank'>
                 <div className={style.footerElementsElement}>
                     <BsWhatsapp className={style.footerElementsElementIcon} />
                     <p>{text.footer.whatsapp}</p>
