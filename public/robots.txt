@@ -1,3 +1,5 @@
 # Hello dear robot
+User-agent: Googlebot
 Allow: /
 Allow: /products/
+
