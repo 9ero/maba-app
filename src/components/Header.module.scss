@@ -2,7 +2,7 @@
 
 .headerContainer {
     position: fixed;
-    background-color: $light;
+    background-image: linear-gradient($light, $light,$light,rgb($light, 0.1));
     width: 100vw;
     padding: 20px calc(7vw - 10px);
     z-index: 1;
@@ -66,7 +66,10 @@
 }
 
 .logo {
-    width: min(400px, 65vw);
+    width: 65vw;
+    @include breakPoints(lg){
+        width: 350px;
+    }
 }
 
 .contactLink {
@@ -86,6 +89,7 @@
 }
 
 .links {
+    padding-left: 10px;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -113,6 +117,7 @@
 }
 
 .flagContainer {
+    
     width: 17vh;
     display: flex;
     flex-direction: column;
@@ -127,10 +132,10 @@
 .flag {
     width: 55px;
     
-    margin-bottom: 20px;
+    margin: 0 0 20px 0px;
     @include breakPoints(lg){
-        margin-bottom: 0px;
-        width: min(60px, 4vw);
+        margin: 0 5px;
+        width: 60px;
     }
     
     cursor: pointer;
