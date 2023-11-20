@@ -26,7 +26,7 @@ export const MainSection = () => {
         const formattingUrl = (text) => {
             return text.replaceAll(' ', '+')
         }
-        window.open(`https://wa.me/50685062925?text=${formattingUrl("Hello, i'm interested in your products")}`)
+        window.open(`https://wa.me/50664368814?text=${formattingUrl("Hello, i'm interested in your products")}`)
     }
     
     useEffect(() => {

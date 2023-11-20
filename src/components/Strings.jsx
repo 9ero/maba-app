@@ -30,7 +30,7 @@ export const Strings = (lang) => {
         footer: {
             email: 'empa.maba@gmail.com',
             phone: '+506 8394 4630',
-            whatsapp: '+506 8506 2925',
+            whatsapp: '+506 6436 8814',
             facebook: 'facebook.com/maba.agroexport',
             disclaimer: lang == 'spa' ? '©2023 MABA AgroExport Todos los derechos reservados. Desarrollado por Juan Fernandez' : lang == 'eng' ?
                 '©2023 MABA AgroExport all rights reserved. Developed by Juan Fernandez' : '©2023 MABA AgroExport all rights reserved. Developed by Juan Fernandez',
