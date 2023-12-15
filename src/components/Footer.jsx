@@ -46,7 +46,7 @@ export const Footer = () => {
 
         </div>
         <div className={style.footerDisclaimer}>
-            <h5>{text.footer.disclaimer}</h5>
+            <p>{text.footer.disclaimer}</p>
         </div>
     </footer>
 }

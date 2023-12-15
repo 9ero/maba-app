@@ -10,6 +10,8 @@
     background-image: linear-gradient(180deg, $primary, rgb(2, 32, 2),black);
     flex-direction: column;
     form{
+        display: flex;
+        flex-direction: column;
         margin-top: 10px;
         background-color: $light;
         padding: 50px 20px;
@@ -19,6 +21,7 @@
         }
         textarea{
             margin-bottom: 15px;
+            resize: none;
         }
         
             
