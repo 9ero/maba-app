@@ -53,4 +53,4 @@ Este proyecto está bajo la Licencia Apache 2.0 - consulta el archivo [LICENSE](
 - ✉️ Email: juan.fernadez.araya@gmail.com
 - 🌐 Sitio Web: https://maba-agroexport.com
 
-Desarrollado con ❤️ por Juan Miguel Fernández Araya - © 2024 MABA Agroexport
+Desarrollado con ❤️ por Juan Miguel Fernández Araya - © 2023 MABA Agroexport
